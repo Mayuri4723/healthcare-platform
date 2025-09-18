@@ -17,9 +17,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Database connection
 const dbConfig = {
     host: 'localhost',
-    user: 'root',
-    password: '12345678',
-    database: 'healthcare_platform'
+    user: 'process.env.DB_USER',
+    password: 'process.env.DB_PASS',
+    database: 'process.env.DB_NAME'
 };
 
 // Create connection pool
